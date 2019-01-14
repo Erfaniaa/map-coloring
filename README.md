@@ -24,37 +24,35 @@ python3 map_coloring.py map_image_file_name
 ```
 python3 map_coloring.py iran.jpg
 ```
-Original Image:
+The original image:
 
-![iran](https://user-images.githubusercontent.com/7780269/51145922-88122000-186a-11e9-9577-b4b33f767731.jpg)
+<img src="https://user-images.githubusercontent.com/7780269/51145922-88122000-186a-11e9-9577-b4b33f767731.jpg" width="300">
 
-Program output:
+A part of the program output:
 
-![iran_output](https://user-images.githubusercontent.com/7780269/51145956-9eb87700-186a-11e9-9eaf-fce66e7b5b6b.gif)
+<img src="https://user-images.githubusercontent.com/7780269/51145956-9eb87700-186a-11e9-9eaf-fce66e7b5b6b.gif" width="300">
 
 ```
 python3 map_coloring.py tehran_province.jpg
 ```
-Original Image:
+The original image:
 
-![tehran_province](https://user-images.githubusercontent.com/7780269/51145925-88122000-186a-11e9-81a5-c3c633496866.jpg)
+<img src="https://user-images.githubusercontent.com/7780269/51145925-88122000-186a-11e9-81a5-c3c633496866.jpg" width="300">
 
-Program output:
+A part of the program output:
 
-![tehran_province_output](https://user-images.githubusercontent.com/7780269/51145952-9e1fe080-186a-11e9-8968-09861c3a7008.gif)
+<img src="https://user-images.githubusercontent.com/7780269/51145952-9e1fe080-186a-11e9-8968-09861c3a7008.gif" width="300">
 
 ```
 python3 map_coloring.py usa.png
 ```
+The original image:
 
-Original Image:
+<img src="https://user-images.githubusercontent.com/7780269/51146422-028f6f80-186c-11e9-941c-c77f332c81b4.png" width="300">
 
-![usa](https://user-images.githubusercontent.com/7780269/51146422-028f6f80-186c-11e9-941c-c77f332c81b4.png)
+A part of the program output:
 
-
-Program output:
-
-![usa_output](https://user-images.githubusercontent.com/7780269/51145955-9e1fe080-186a-11e9-9cf2-96fc1a9198f7.gif)
+<img src="https://user-images.githubusercontent.com/7780269/51145955-9e1fe080-186a-11e9-9cf2-96fc1a9198f7.gif" width="300">
 
 # Notes
 It runs slowly on large images.
