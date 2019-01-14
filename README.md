@@ -49,7 +49,7 @@ python3 map_coloring.py usa.png
 
 Original Image:
 
-![usa](https://user-images.githubusercontent.com/7780269/51146221-78470b80-186b-11e9-9db3-8a9701d2d0c3.png)
+![usa](https://user-images.githubusercontent.com/7780269/51146422-028f6f80-186c-11e9-941c-c77f332c81b4.png)
 
 
 Program output:
