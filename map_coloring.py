@@ -1,6 +1,6 @@
 import cv2
 import numpy as np
-import resource, sys
+import sys
 from matplotlib import pyplot as plt
 
 MAP_IMAGE_PATH = sys.argv[1]
@@ -30,9 +30,6 @@ nodes = []
 regions = [[] for i in range(MAXIMUM_NUMBER_OF_REGIONS)]
 regions_border = [[] for i in range(MAXIMUM_NUMBER_OF_REGIONS)]
 nodes_color = [NO_COLOR for i in range(MAXIMUM_NUMBER_OF_REGIONS)]
-
-resource.setrlimit(resource.RLIMIT_STACK, (2 ** 29, -1))
-sys.setrecursionlimit(10 ** 6)
 
 class Node:
 	def __init__(self, node_id, node_x, node_y):
@@ -105,16 +102,22 @@ def same_pixel_colors(x1, y1, x2, y2):
 	diff = abs(r1 - r2) + abs(g1 - g2) + abs(b1 - b2)
 	return diff <= 3 * MAXIMUM_NEIGHBOR_PIXEL_COLOR_DIFFERENCE
 
-def get_region_area(x, y, src_mark, dst_mark):
-	if not is_inside(x, y) or mark[y][x] != src_mark:
+def get_region_area(start_x, start_y, src_mark, dst_mark):
+	if not is_inside(start_x, start_y) or mark[start_y][start_x] != src_mark:
 		return 0
-	mark[y][x] = dst_mark
-	color_area = 1
-	for k in range(4):
-		x2 = x + DX[k]
-		y2 = y + DY[k]
-		if is_inside(x2, y2) and mark[y2][x2] == src_mark and same_pixel_colors(x, y, x2, y2):
-			color_area += get_region_area(x2, y2, src_mark, dst_mark)
+	color_area = 0
+	queue = [(start_x, start_y)]
+	mark[start_y][start_x] = dst_mark
+	while queue:
+		x, y = queue.pop(0)
+		mark[y][x] = dst_mark
+		color_area += 1
+		for k in range(4):
+			x2 = x + DX[k]
+			y2 = y + DY[k]
+			if is_inside(x2, y2) and mark[y2][x2] == src_mark and same_pixel_colors(x, y, x2, y2):
+				mark[y2][x2] = dst_mark
+				queue.append((x2, y2))
 	return color_area
 
 def are_adjacent(node1:Node, node2:Node):
