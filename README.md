@@ -77,7 +77,7 @@ A part of the program output:
 <img src="https://user-images.githubusercontent.com/7780269/51145955-9e1fe080-186a-11e9-9cf2-96fc1a9198f7.gif" width="300">
 
 # Notes
-It runs slowly on large images. It can be improved by changing the second part of its algorithm (setting the graph edges). Some computational geometry knowledge about polygons may be needed for this part.
+It runs slowly on large images. It can be improved by changing the second part of its algorithm (about setting the graph edges). Some computational geometry knowledge about polygons may be needed for this part.
 
 Any contributions are welcomed.
 
