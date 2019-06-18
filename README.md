@@ -7,12 +7,22 @@ The input image background and borders should be white.
 
 # Dependencies
 Install numpy, matplotlib and opencv.
+
+Linux:
 ```
 sudo apt update
 sudo apt upgrade
 sudo apt install python3-numpy python3-scipy python3-matplotlib
 sudo apt install python3-opencv
 sudo apt install python3-pip
+```
+
+Windows (using pip3 is preferred):
+```
+pip install numpy
+pip install scipy
+pip install matplotlib
+pip install opencv-python
 ```
 
 # Run
