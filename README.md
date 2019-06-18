@@ -5,6 +5,14 @@ This program gets a map image as an input and produces all possible valid colori
 
 The input image background and borders should be white.
 
+# Algorithm
+
+1. Detecting all non-white regions (eg. provinces or states).
+2. Converting the input map to a simple planar graph:
+There will be a node for each region. Two nodes will be adjacent, if and only if their correspondent region have a common border on the map.
+3. Using backtracking for [coloring](https://en.wikipedia.org/wiki/Graph_coloring#Vertex_coloring) that graph (it's a recursive function that produce all valid colorings).
+4. Displaying all produced colorings on the given map.
+
 # Dependencies
 Install numpy, matplotlib and opencv.
 
@@ -65,5 +73,7 @@ A part of the program output:
 <img src="https://user-images.githubusercontent.com/7780269/51145955-9e1fe080-186a-11e9-9cf2-96fc1a9198f7.gif" width="300">
 
 # Notes
-It runs slowly on large images.
+It runs slowly on large images. It can be improved by changing the second part of its algorithm (setting the graph edges). Some computational geometry knowledge about polygons may be needed for this part.
+
+Any contributions are welcomed.
 
