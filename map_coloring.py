@@ -3,7 +3,11 @@ import numpy as np
 import sys
 from matplotlib import pyplot as plt
 
-MAP_IMAGE_PATH = sys.argv[1]
+try:
+	MAP_IMAGE_PATH = sys.argv[1]
+except IndexError:
+	print("Error: please specify an image.")
+	exit(0)
 ESCAPE_KEY_CHARACTER = 27
 NO_COLOR = -1
 NOT_MARKED = -1
