@@ -5,6 +5,10 @@ This program gets a map image as an input and produces all possible valid colori
 
 The input image background and borders should be white.
 
+# Some Basic Stuff to Know
+1. [Map coloring](https://en.wikipedia.org/wiki/Map_coloring)
+2. [Four color theorem](https://en.wikipedia.org/wiki/Four_color_theorem)
+
 # Algorithm
 
 1. Detecting all non-white regions (eg. provinces or states).
