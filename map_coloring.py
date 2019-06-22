@@ -24,10 +24,15 @@ COLORING_COLORS = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (0, 255, 255)]
 DX = [-1, +1, 0, 0]
 DY = [0, 0, -1, +1]
 SHARPEN_KERNEL = np.array([[-1, -1, -1], [-1, 9, -1], [-1, -1, -1]])
+MAXIMUM_IMAGE_WIDTH = 1000
+MAXIMUM_IMAGE_HEIGHT = 1000
 
 image = cv2.imread(MAP_IMAGE_PATH, cv2.IMREAD_COLOR)
 height = len(image)
 width = len(image[0])
+if width > MAXIMUM_IMAGE_WIDTH or height > MAXIMUM_IMAGE_HEIGHT:
+	print("Error: please specify an image with smaller dimensions.")
+	exit(0)
 total_area = width * height
 mark = [[NOT_MARKED for i in range(width)] for j in range(height)]
 nodes = []
