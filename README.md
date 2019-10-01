@@ -15,7 +15,7 @@ The input image background and borders should be white.
 
 1. Detecting all non-white regions (eg. provinces or states).
 2. Converting the input map to a simple planar graph:
-   There will be a node for each region. Two nodes will be adjacent, if and only if their correspondent region have a common border on the map.
+   There will be a node for each region. Two nodes will be adjacent, if and only if their corresponding regions have a common border on the map.
 3. Using backtracking for [coloring](https://en.wikipedia.org/wiki/Graph_coloring#Vertex_coloring) that graph (it's a recursive function that produces all valid colorings).
 4. Displaying all produced colorings on the given map.
 
